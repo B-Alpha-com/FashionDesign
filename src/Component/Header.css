@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Oswald:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Oi&family=Oswald:wght@300&family=Reggae+One&display=swap");
+.nav_Header {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+@media only screen and (max-width: 500px) {
+  .nav_Header {
+    position: relative;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+.nav_Div {
+  display: flex;
+  width: 100%;
+}
+.list_Div {
+  display: flex;
+  width: 500px;
+  margin-left: auto;
+}
+@media only screen and (max-width: 500px) {
+  .list_Div {
+    display: none;
+  }
+}
+.ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+  width: 70rem;
+  font-size: 5px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.icon_Div {
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .icon {
+    display: flex;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: aliceblue;
+  }
+  .icon_Div {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    margin-left: auto;
+  }
+}
+.h1 {
+  font-size: 1rem;
+  font-style: normal;
+  letter-spacing: 5px;
+  margin-top: 0%;
+  margin-left: 20px;
+  border: 2px;
+  border-radius: 15px;
+  border-style: solid;
+  font-family: "Oswald", sans-serif;
+  color: aliceblue;
+  padding: 5px 20px;
+}
+@media only screen and (max-width: 500px) {
+  .h1 {
+    font-size: 0.8rem;
+    width: 80px;
+    border: 2px;
+    padding: 0px;
+    border-style: solid;
+    margin-top: 10px;
+  }
+}
+.home_Link,
+.gallery_Link,
+.vision_Link,
+.books_Link {
+  font-family: "Oswald", sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  color: aliceblue;
+}
+/* SideBar styling */
+
+.sideBar-div {
+  flex-direction: column;
+  background-color: bisque;
+  position: absolute;
+  top: 37px;
+  bottom: 0;
+  left: 150px;
+  right: 0;
+  z-index: 10;
+  height: 100vh;
+  width: 400px;
+  transition: 2s ease;
+}
+.sideBar-list-container {
+  display: flex;
+}
+.sideBar-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+/* SubMenu Styling */
+.subMenu-container {
+  position: absolute;
+  top: 50px;
+  left: 50;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  max-height: max-content;
+  max-width: max-content;
+  background-color: aliceblue;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px;
+  transition: 2s ease;
+}
+.submenu-list {
+  list-style: none;
+  display: flex;
+}
