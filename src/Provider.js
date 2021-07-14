@@ -28,6 +28,9 @@ const AppProvider = ({ children }) => {
     setcenter(center);
     openSubMenu();
   };
+  const navBarScroll = () => {
+    console.log(window.pageYOffset);
+  };
 
   return (
     <AppContext.Provider
@@ -41,6 +44,7 @@ const AppProvider = ({ children }) => {
         displaySideBar,
         link,
         center,
+        navBarScroll,
       }}
     >
       {children}

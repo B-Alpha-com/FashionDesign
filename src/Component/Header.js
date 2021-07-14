@@ -6,11 +6,11 @@ import "./Header.css";
 import { useGlobalContext } from "../Provider";
 import SubMenu from "./SubMenu";
 
-const Header = () => {
+const Header = ({ scroll }) => {
   const { opensideBar, displaySideBar } = useGlobalContext();
   return (
     <>
-      <nav className="nav_Header">
+      <nav className={scroll > 25 ? "nav-fixed" : "nav_Header"}>
         <div className="nav_Div">
           <div className="h1_Div">
             <h1 className="h1">B-Alpha</h1>

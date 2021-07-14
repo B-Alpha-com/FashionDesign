@@ -24,6 +24,7 @@ class App extends Component {
         confirmpassword: "",
       },
       users: [],
+      scroll: 0,
     };
   }
   handleChangeName = (e) => {
@@ -75,6 +76,10 @@ class App extends Component {
       },
     });
   };
+  handleScroll = (e) => {
+    let scroll = e.target.scrollTop;
+    this.setState({ scroll });
+  };
 
   async componentDidMount() {
     let resp = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -90,11 +95,12 @@ class App extends Component {
       handleChangeSurName,
       handleChangeUserName,
       handleClick,
+      handleScroll,
     } = this;
-    const data = this.state.data;
+    const { data, scroll } = this.state;
     return (
-      <div className="App">
-        <Header />
+      <div className="App" onScroll={handleScroll}>
+        <Header scroll={scroll} />
         <Switch>
           <Route exact path="/Home" component={Home} />
           <Route exact path="/Gallery">
@@ -131,6 +137,3 @@ class App extends Component {
   }
 }
 export default App;
-// const Button = ({ handleClick }) => (
-//   <button onClick={handleClick}> click this</button>
-// );
